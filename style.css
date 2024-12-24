@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 html,
 body {
   display: flex;
@@ -5,17 +7,95 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
+  font-family: "Inter", serif;
 }
 
 .main-container {
   display: flex;
-  width: 128px;
-  height: 256px;
+  width: 256px;
+  min-width: 264px;
+  height: 388px;
   flex-wrap: wrap;
+  margin: 0%;
+  padding: 2px;
+  border: 2px solid rgb(197, 197, 197);
+  border-radius: 12px;
+}
+
+.main-container > * {
+  font-family: "Inter", serif;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0%;
+  justify-content: center;
+}
+
+#equation {
+  width: 100%;
+  min-width: 220px;
+  height: 170px;
+  max-height: 170px;
+  min-height: 170px;
+  margin: 4px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.equation:active {
+  border: 2px solid rgb(255, 0, 0);
 }
 
 button {
-  width: 25%;
-  padding: 0;
-  margin: 0;
+  width: 60px;
+  height: 30px;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  /*border-radius: 36px;*/
+  padding: 0%;
+  margin: 2px;
+  border-color: rgba(12, 121, 216, 0);
+  font-weight: 700;
+  font-size: medium;
+}
+
+button:active {
+  box-shadow: 0px 0px 4px rgba(155, 155, 155, 0.918);
+}
+
+.op {
+  background-color: rgb(255, 189, 66);
+  font-size: large;
+}
+
+.op:hover {
+  background-color: rgb(248, 175, 38);
+}
+
+.num {
+  background-color: rgb(203, 208, 212);
+}
+
+.num:hover {
+  background-color: rgb(184, 189, 190);
+}
+
+.symbol,
+.dot {
+  background-color: rgb(130, 206, 247);
+}
+
+.symbol:hover,
+.dot:hover {
+  background-color: rgb(110, 184, 228);
+}
+
+.all-clear {
+  background-color: rgb(247, 103, 36);
+}
+
+.all-clear:hover {
+  background-color: rgb(236, 85, 39);
 }
