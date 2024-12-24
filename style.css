@@ -42,6 +42,9 @@ body {
   margin: 4px;
   padding: 16px;
   border-radius: 8px;
+  color: rgb(44, 44, 44);
+  font-size: large;
+  align-items:last baseline;
 }
 
 .equation:active {

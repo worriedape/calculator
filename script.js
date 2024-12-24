@@ -1,35 +1,37 @@
- // addition
+// addition
 
- // substraction
+// substraction
 
- // division
+// division
 
- // multiplication
+// multiplication
 
- 
-const buttonsContainer = document.querySelector('.buttons');
+const textArea = document.getElementById("equation");
+textArea.value = "";
+//const equalTo = document.querySelector(".equal-to");
 
-const buttons = buttonsContainer.querySelectorAll('button');
+const allClear = document.querySelector(".all-clear");
+allClear.addEventListener("click", () => {
+  textArea.value = "";
+});
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const buttonClass = button.classList[0]; 
+const num = document.querySelectorAll(".num");
+num.forEach((num) => {
+  num.addEventListener("click", () => {
+    textArea.value += num.textContent;
+  });
+});
 
-    switch (buttonClass) {
-      case 'num':
-        // Handle number button clicks
-        break;
-      case 'op':
-        // Handle operator button clicks
-        break;
-      case 'symbol':
-        // Handle symbol button clicks
-        break;
-      case 'all-clear':
-        // Handle AC button click
-        break;
-      default:
-        break;
+/*
+const buttonsContainer = document.querySelector(".buttons");
+
+const buttons = buttonsContainer.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (button.textContent !== "=" || button.textContent !== "AC") {
+      textArea.value += button.textContent;
     }
   });
 });
+*/
