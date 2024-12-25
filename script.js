@@ -7,8 +7,8 @@
 // multiplication
 
 const textArea = document.getElementById("equation");
-textArea.value = "";
-//const equalTo = document.querySelector(".equal-to");
+textArea.value;
+//const equalTo 
 
 const allClear = document.querySelector(".all-clear");
 allClear.addEventListener("click", () => {
@@ -21,6 +21,20 @@ num.forEach((num) => {
     textArea.value += num.textContent;
   });
 });
+
+const op = document.querySelectorAll(".op");
+op.forEach((op) => {
+  op.addEventListener("click", () => {
+    textArea.value += op.textContent;
+  });
+});
+
+const equalTo = document.querySelector(".equal-to");
+equalTo.addEventListener("click", ()=> {
+  let calculo = +textArea.value;
+  textArea.value += `${equalTo.textContent}  ${+calculo}`;
+})
+
 
 /*
 const buttonsContainer = document.querySelector(".buttons");

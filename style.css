@@ -95,6 +95,14 @@ button:active {
   background-color: rgb(110, 184, 228);
 }
 
+.equal-to {
+  background-color: rgb(63, 165, 255);
+}
+
+.equal-to:hover {
+  background-color: rgb(53, 148, 231);
+}
+
 .all-clear {
   background-color: rgb(247, 103, 36);
 }
