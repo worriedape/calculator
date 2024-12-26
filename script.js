@@ -22,9 +22,16 @@ let.forEach((op) => {
 
 let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let operants = /[+\-÷×]/g;
-let operator = function() {return textArea.value.split("").filter(num => !numbers.includes(num));}
+let operator = function () {
+  return textArea.value
+    .split("")
+    .filter((num) => !numbers.includes(num))
+    .join();
+};
 
-let splitting = function() {return textArea.value.split(operants)};
+let splitting = function () {
+  return textArea.value.split(operants);
+};
 let firstOp = () => +splitting()[0];
 let secondOp = () => +splitting()[1];
 
@@ -45,7 +52,6 @@ equalTo.addEventListener("click", () => {
       break;
   }
 });
-
 
 //equalTo loop the textArea string splitting by operator delimiting
 //store the value from the left side numbers and another from the right side numbers, including dot
